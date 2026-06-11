@@ -1,0 +1,36 @@
+body {
+  background-color: black;/* 1 */
+}
+.line {
+  position: absolute;/* 2 */
+  background-color: white;/* 3 */
+}
+
+.horizontal {
+  width: 100%;/* 4 */
+  height: 1px;/* 5 */
+  top: 50%/* 6 */
+}
+
+.vertical {
+  height: 100%;/* 7 */
+  width: 1px;/* 8 */
+  left: 50%;/* 9 */
+}
+/* img태그에 대한 스타일 */
+.target {
+  position: absolute;/* 10 */
+  top: 50%;/* 11 */
+  left: 50%;/* 12 */
+  /* 아래코드가 있어야 이미지 중심이 옮겨진다*/
+  transform: translate(-50%, -50%);/* 13  이요소(이미지태그)의 절반만큼씩 이동시킴*/
+}
+
+.tag {
+  color: white;/* 14 */
+  position: absolute;/* 15 */
+  top: 50%;/* 16 */
+  left: 50%;/* 17 */
+  font-size: 38px;/* 19 */
+  transform: translate(20px,20px);/* 18 */
+}

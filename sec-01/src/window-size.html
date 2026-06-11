@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Size</title>
+  <style>
+    .tag {
+      display: inline-block;/*컨텐츠를 감싸준다.*/
+      background-color: thistle;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tag">Window Size</div>
+  <p>윈도우 창 크기를 변경하면 숫자가 바뀌는 것을 확인할 수 있습니다.</p>
+  <script>
+    const tag = document.querySelector('.tag');
+    //window.addEventListener('resize', function(){
+    //window.addEventListener('resize', () => {
+    window.addEventListener('resize', event => {
+      //resize 대신에 우리가 원하는 정보를 입력해 본다.
+      //텍스트와 변수의 값을 함께 쓸 수 있는 것은 string template이 있는데요.
+      //물결 기호(~) 옆에 있는 백틱기호(`)를 이용하셔서
+      //console.log(event+'resize');
+      //컴퓨터의 모니터의 화면 사이즈 임.
+      console.log(`window.screen: ${window.screen.width},${window.screen.height}`);
+      //window에 있는 outer는 브라우저에 있는 URL, 그리고 탭, 전체적인 브라우저의 사이즈를 말함.
+      console.log(`window.outer: ${window.outerWidth},${window.outerHeight}`);
+      //window에 있는 inner는 웹페이지 뿐아니라 웹 페이지 수직에 스크롤바가 있다면 그 스크롤바가 
+      //표기되는 것을 합한 페이지가 표기되는 이 부분 전체를 얘기하는 겁니다.
+      console.log(`window.inner: ${window.innerWidth},${window.innerHeight}`);
+      //clientHeight는 스크롤바가 제외된 사이즈 이다. - 스크롤바는 제외된 문서사이즈임
+      console.log(`documentElement.clientWidth: ${document.documentElement.clientWidth},${document.documentElement.clientHeight}`);
+    });
+  </script>
+</body>
+</html>
