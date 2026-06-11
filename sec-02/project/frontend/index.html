@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여행 페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Trip Flow</h1>
+  </header>
+
+  <main>
+    <!-- 여행 등록 폼 -->
+    <section class="form-section">
+      <form id="addTripForm">
+        <input name="title" placeholder="여행 제목" required>
+        <input name="duration" placeholder="기간 (예: 2박 3일)" required>
+        <button type="submit">등록</button>
+      </form>
+    </section>
+
+    <!-- 카드 목록 (JS가 동적으로 채움) -->
+    <section class="container"></section>
+  </main>
+
+  <footer>
+    <p>© 2026 Trip Flow</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
