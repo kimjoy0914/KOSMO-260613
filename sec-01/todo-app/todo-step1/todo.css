@@ -1,0 +1,95 @@
+/* 전체 화면 기본 설정 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* 앱 전체 박스 */
+.app {
+  width: 400px;
+  margin: 80px auto;
+  padding: 24px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 제목 */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* 입력 영역 */
+.input-box {
+  display: flex;
+  gap: 8px;
+}
+
+/* 입력창 */
+#todoInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* 추가 버튼 */
+#addBtn {
+  padding: 10px 16px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+#addBtn:hover {
+  background-color: #1d4ed8;
+}
+
+/* 안내 문구 */
+.guide {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 목록 기본 스타일 제거 */
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* 할 일 한 줄 */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* 할 일 텍스트 */
+.todo-text {
+  font-size: 16px;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  border: none;
+  background-color: #ef4444;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 삭제 버튼 hover */
+.delete-btn:hover {
+  background-color: #dc2626;
+}

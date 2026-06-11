@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-do App</title>
+
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="./todo.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>나의 할 일 목록</h1>
+
+    <!-- 할 일 입력 영역 -->
+    <div class="input-box">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="할 일을 입력하세요"
+      />
+      <button id="addBtn">추가</button>
+    </div>
+
+    <!-- 안내 문구 -->
+    <p class="guide">
+      할 일을 추가하면 브라우저 localStorage에 저장됩니다.
+    </p>
+
+    <!-- 할 일 목록 출력 영역 -->
+    <ul id="todoList"></ul>
+  </div>
+
+  <!-- JavaScript 파일 연결 -->
+  <script src="./todo.js"></script>
+</body>
+</html>
