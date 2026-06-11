@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Permissions-Policy" content="unload=*">
+  <title>test</title>
+</head>
+<body>
+<script>
+  const ajax = new XMLHttpRequest()
+  ajax.open("GET", "test.json", false) //함수 호출. ajax주소번지. 누구지? -XMLHttpRequest타입 -클래스다
+  ajax.send() //전송이 된다. - 요청이 들어갔다. - 내컴터에서 해커 뉴스 서버 컴터로 요청을 하였다. - reqeust객체
+
+  const newsTitle = JSON.parse(ajax.response) 
+  console.log(ajax.response);
+</script>
+</body>
+</html>
+<!--
+로그에 **content.js:2**가 찍혀 있습니다. 이 경로는 강의 폴더 안의 파일이 아니라, 
+Chrome에 깔린 확장 프로그램이 페이지에 넣는 콘텐츠 스크립트입니다.
+test.html 안에는 unload나 addEventListener가 없으므로, XHR·test.json과는 무관합니다.
+
+최신 Chrome은 문서에서 unload 리스너를 기본적으로 막는 Permissions Policy가 많습니다. 
+어떤 확장이 unload를 등록하려다 이 문서에서는 허용되지 않음으로 막히면, 지금 같은 Violation 메시지가 납니다.
+-->
