@@ -1,0 +1,19 @@
+{
+  "editor.fontSize": 16,
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2,
+  "scm.compactFolders": false,
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "path": ["${env:windir}\\System32\\cmd.exe"],
+      "args": ["/K", "chcp 65001"]
+    },
+    "PowerShell (UTF-8)": {
+      "source": "PowerShell",
+      "args": ["-NoExit", "-Command", "chcp 65001 | Out-Null; [Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8"]
+    }
+  },  
+  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "python-envs.pythonProjects": [],
+  "java.compile.nullAnalysis.mode": "automatic"
+}

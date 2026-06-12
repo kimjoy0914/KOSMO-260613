@@ -864,6 +864,9 @@ app.use("/api/ai", aiRouter);  // ← 추가
 curl -X POST http://localhost:3000/api/ai/recommend \
   -H "Content-Type: application/json" \
   -d '{"destination":"부산","days":2,"style":"맛집"}'
+
+
+curl -X POST http://localhost:3000/api/ai/recommend -H "Content-Type: application/json" -d '{"destination":"부산","days":2,"style":"맛집"}'
 ```
 
 #### 응답 예시
